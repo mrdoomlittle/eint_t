@@ -3,17 +3,17 @@
 
 # if defined(USING_OPENCL) && defined(USE_CL_TYPES)
 # ifdef ARC64
-	typedef cl_ulong uint_t;
-	typedef cl_long int_t;
+	typedef ulong uint_t;
+	typedef long int_t;
 # elif ARC32
-	typedef cl_uint uint_t;
-	typedef cl_int int_t;
+	typedef uint uint_t;
+	typedef int int_t;
 # elif ARC16
-	typedef cl_ushort uint_t;
-	typedef cl_short int_t;
+	typedef ushort uint_t;
+	typedef short int_t;
 # elif ARC8
-	typedef cl_uchar uint_t;
-	typedef cl_char int_t;
+	typedef uchar uint_t;
+	typedef char int_t;
 # endif
 # else
 
