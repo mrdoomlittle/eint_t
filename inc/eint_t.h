@@ -1,22 +1,22 @@
 # ifndef __eint__t__h
 # define __eint__t__h
 
-# ifdef USING_OPENCL
+# if defined(USING_OPENCL) && defined(USE_CL_TYPES)
 	# include <CL/cl.h>
 # ifdef ARC64
-	typedef cl_ulong cl_uint_t;
-	typedef cl_long cl_int_t;
+	typedef cl_ulong uint_t;
+	typedef cl_long int_t;
 # elif ARC32
-	typedef cl_uint cl_uint_t;
-	typedef cl_int cl_int_t;
+	typedef cl_uint uint_t;
+	typedef cl_int int_t;
 # elif ARC16
-	typedef cl_ushort cl_uint_t;
-	typedef cl_short cl_int_t;
+	typedef cl_ushort uint_t;
+	typedef cl_short int_t;
 # elif ARC8
-	typedef cl_uchar cl_uint_t;
-	typedef cl_char cl_int_t;
+	typedef cl_uchar uint_t;
+	typedef cl_char int_t;
 # endif
-# endif
+# else
 
 # include <stdint.h>
 # ifdef ARC64
@@ -34,6 +34,7 @@
 # else
     typedef int unsigned uint_t;
     typedef int int_t;
+# endif
 # endif
 
 # endif /*__eint__t__h*/
