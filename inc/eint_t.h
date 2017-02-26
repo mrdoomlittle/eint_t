@@ -2,7 +2,6 @@
 # define __eint__t__h
 
 # if defined(USING_OPENCL) && defined(USE_CL_TYPES)
-	# include <CL/cl.h>
 # ifdef ARC64
 	typedef cl_ulong uint_t;
 	typedef cl_long int_t;
