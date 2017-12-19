@@ -61,7 +61,7 @@ typedef uint8_t mdl_u8_t;
 typedef int8_t mdl_i8_t;
 # endif
 
-# if defined(ARC64) || defined(__ARC64)
+# if defined(ARC64) || defined(__ARC64) || defined(__arc64)
 # ifndef __mdl_uint_t_defined
 # define __mdl_uint_t_defined
 typedef mdl_u64_t mdl_uint_t;
@@ -73,7 +73,7 @@ typedef mdl_i64_t mdl_int_t;
 # endif
 # endif
 
-# if defined(ARC32) || defined(__ARC32)
+# if defined(ARC32) || defined(__ARC32) || defined(__arc32)
 # ifndef __mdl_uint_t_defined
 # define __mdl_uint_t_defined
 typedef mdl_u32_t mdl_uint_t;
@@ -85,7 +85,7 @@ typedef mdl_i32_t mdl_int_t;
 # endif
 # endif
 
-# if defined(ARC16) || defined(__ARC16)
+# if defined(ARC16) || defined(__ARC16) || defined(__arc16)
 # ifndef __mdl_uint_t_defined
 # define __mdl_uint_t_defined
 typedef mdl_u16_t mdl_uint_t;
@@ -97,7 +97,7 @@ typedef mdl_i16_t mdl_int_t;
 # endif
 # endif
 
-# if defined(ARC8) || defined(__ARC8)
+# if defined(ARC8) || defined(__ARC8) || defined(__arc8)
 # ifndef __mdl_uint_t_defined
 # define __mdl_uint_t_defined
 typedef mdl_u8_t mdl_uint_t;
@@ -140,6 +140,4 @@ typedef mdl_int_t int_t;
 }
 # endif
 # endif
-
-
 # endif /*__eint__t__h*/
