@@ -1,64 +1,64 @@
-# ifndef __eint__t__h
-# define __eint__t__h
-# ifdef __cplusplus
-#	include <cstdint>
-# else
-#	include <stdint.h>
-# endif
-
-# if (defined(__USING_OPENCL) || defined(USING_OPENCL)) && defined(__OPENCL_API_TYPES)
-# include <CL/cl.hpp>
-typedef cl_ulong mdl_cl_u64_t;
-typedef cl_long mdl_cl_i64_t;
-
-typedef cl_uint mdl_cl_u32_t;
-typedef cl_int mdl_cl_i32_t;
-
-typedef cl_ushort mdl_cl_u16_t;
-typedef cl_short mdl_cl_i16_t;
-
-typedef cl_uchar mdl_cl_u8_t;
-typedef cl_char mdl_cl_i8_t;
-# endif
-
+# ifndef __mdlint__h
+# define __mdlint__h
+# include <stdint.h>
 # ifndef __mdl_u64_t_defined
 # define __mdl_u64_t_defined
-typedef uint64_t mdl_u64_t;
+typedef long long unsigned mdl_u64_t;
 # endif
 
 # ifndef __mdl_i64_t_defined
 # define __mdl_i64_t_defined
-typedef int64_t mdl_i64_t;
+typedef long long int mdl_i64_t;
+# endif
+
+# ifndef __mdl_s64_t_defined
+# define __mdl_s64_t_defined
+typedef long long int mdl_s64_t;
 # endif
 
 # ifndef __mdl_u32_t_defined
 # define __mdl_u32_t_defined
-typedef uint32_t mdl_u32_t;
+typedef unsigned int mdl_u32_t;
 # endif
 
 # ifndef __mdl_i32_t_defined
 # define __mdl_i32_t_defined
-typedef int32_t mdl_i32_t;
+typedef int mdl_i32_t;
+# endif
+
+# ifndef __mdl_s32_t_defined
+# define __mdl_s32_t_defined
+typedef int mdl_s32_t;
 # endif
 
 # ifndef __mdl_u16_t_defined
 # define __mdl_u16_t_defined
-typedef uint16_t mdl_u16_t;
+typedef unsigned short int mdl_u16_t;
 # endif
 
 # ifndef __mdl_i16_t_defined
 # define __mdl_i16_t_defined
-typedef int16_t mdl_i16_t;
+typedef short int mdl_i16_t;
+# endif
+
+# ifndef __mdl_s16_t_defined
+# define __mdl_s16_t_defined
+typedef short int mdl_s16_t;
 # endif
 
 # ifndef __mdl_u8_t_defined
 # define __mdl_u8_t_defined
-typedef uint8_t mdl_u8_t;
+typedef unsigned char mdl_u8_t;
 # endif
 
 # ifndef __mdl_i8_t_defined
 # define __mdl_i8_t_defined
-typedef int8_t mdl_i8_t;
+typedef signed char mdl_i8_t;
+# endif
+
+# ifndef __mdl_s8_t_defined
+# define __mdl_s8_t_defined
+typedef signed char mdl_s8_t;
 # endif
 
 # if defined(ARC64) || defined(__ARC64) || defined(__arc64)
@@ -125,19 +125,23 @@ typedef int mdl_int_t;
 namespace mdl {
 typedef mdl_u64_t u64_t;
 typedef mdl_i64_t i64_t;
+typedef mdl_s64_t s64_t;
 
 typedef mdl_u32_t u32_t;
 typedef mdl_i32_t i32_t;
+typedef mdl_s32_t s32_t;
 
 typedef mdl_u16_t u16_t;
 typedef mdl_i16_t i16_t;
+typedef mdl_s16_t s16_t;
 
 typedef mdl_u8_t u8_t;
 typedef mdl_i8_t i8_t;
+typedef mdl_s8_t s8_t;
 
 typedef mdl_uint_t uint_t;
 typedef mdl_int_t int_t;
 }
 # endif
 # endif
-# endif /*__eint__t__h*/
+# endif /*__mdlint__h*/
